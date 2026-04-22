@@ -62,16 +62,19 @@ Each document can have a different structure, making it very flexible.
 
 There are four main types of NoSQL databases:
 
-Document stores (e.g., MongoDB)
-Key-value stores (e.g., Redis)
-Column-oriented databases (e.g., Cassandra)
-Graph databases (e.g., Neo4j)
+- Document stores (e.g., MongoDB)
+- Key-value stores (e.g., Redis)
+- Column-oriented databases (e.g., Cassandra)
+- Graph databases (e.g., Neo4j)
+
 ⚡ Benefits of a NoSQL database
-Flexible schema (no strict structure)
-High scalability (especially horizontal scaling)
-High performance for large datasets
-Suitable for unstructured or semi-structured data
-Easy integration with modern applications (APIs, JSON)
+- Flexible schema (no strict structure)
+- High scalability (especially horizontal scaling)
+- High performance for large datasets
+- Suitable for unstructured or semi-structured data
+- Easy integration with modern applications (APIs, JSON)
+
+
 🔍 How to query information from a NoSQL database
 
 In MongoDB, data is queried using JSON-like syntax:
@@ -81,28 +84,35 @@ db.users.find({ name: "Alice" })
 This retrieves all documents where the name is "Alice".
 
 ✏️ How to insert/update/delete information
-Insert
+
+- Insert
+
 db.users.insertOne({ name: "Alice", age: 25 })
-Update
+
+- Update
+
 db.users.updateOne(
   { name: "Alice" },
   { $set: { age: 26 } }
 )
-Delete
+
+- Delete
+
 db.users.deleteOne({ name: "Alice" })
+
 🍃 How to use MongoDB
 
 MongoDB is a popular NoSQL document database.
 
 Basic steps:
 
-Start MongoDB server
-Use the Mongo shell or a driver (Python, Node.js, etc.)
-Create a database:
-use mydatabase
-Insert data:
+- Start MongoDB server
+- Use the Mongo shell or a driver (Python, Node.js, etc.)
+- Create a database:
+- use mydatabase
+- Insert data:
 db.users.insertOne({ name: "Alice" })
-Query data:
+- Query data:
 db.users.find()
 
 MongoDB stores data in collections, which are similar to tables, but without a fixed schema.
