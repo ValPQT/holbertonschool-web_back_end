@@ -22,7 +22,6 @@ class Server:
                 reader = csv.reader(f)
                 dataset = [row for row in reader]
             self.__dataset = dataset[1:]
-
         return self.__dataset
 
     def indexed_dataset(self) -> Dict[int, List]:
@@ -40,12 +39,13 @@ class Server:
         assert index is not None and isinstance(index, int) and index >= 0
 
         dataset = self.indexed_dataset()
-        assert index < len(dataset)
+        max_index = max(dataset.keys())
+        assert index <= max_index
 
         data = []
         current_index = index
 
-        while len(data) < page_size and current_index < len(dataset):
+        while len(data) < page_size and current_index <= max_index:
             if current_index in dataset:
                 data.append(dataset[current_index])
             current_index += 1
