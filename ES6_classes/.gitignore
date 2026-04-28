@@ -1,0 +1,43 @@
+# Dépendances
+node_modules/
+
+# Build / transpilation
+dist/
+build/
+coverage/
+
+# Fichiers environnement
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Cache
+.cache/
+.npm/
+.eslintcache
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE / éditeurs
+.vscode/
+.idea/
+*.swp
+
+# Jest
+coverage/
+
+# Babel
+*.babel.js.cache
+
+# Divers
+tmp/
+temp/
