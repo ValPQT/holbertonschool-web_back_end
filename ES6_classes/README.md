@@ -1,41 +1,48 @@
-📘 ES6 Classes
+# 📘 ES6 Classes
 
+![Node.js](https://img.shields.io/badge/Node.js-20.x-green)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
+---
 
+## 📑 Table of Contents
 
+- [📌 Introduction](#-introduction)
+- [🧱 Define a Class](#-define-a-class)
+- [⚙️ Add Methods](#️-add-methods)
+- [🧩 Static Methods](#-static-methods)
+- [🧬 Inheritance](#-inheritance)
+- [🧠 Metaprogramming & Symbols](#-metaprogramming--symbols)
+- [🚀 Examples](#-examples)
+- [📦 Installation](#-installation)
+- [🧪 Testing](#-testing)
+- [✅ Conclusion](#-conclusion)
 
+---
 
-📑 Table of Contents
-📌 Introduction
-🧱 Define a Class
-⚙️ Add Methods
-🧩 Static Methods
-🧬 Inheritance
-🧠 Metaprogramming & Symbols
-🚀 Examples
-✅ Conclusion
-📌 Introduction
+## 📌 Introduction
 
-This project introduces ES6 Classes in JavaScript, focusing on object-oriented programming concepts such as:
+This project introduces **ES6 Classes in JavaScript**, focusing on:
 
-Class creation
-Methods
-Static methods
-Inheritance
-Advanced concepts like metaprogramming and symbols
-🧱 Define a Class
+- Class creation
+- Methods
+- Static methods
+- Inheritance
+- Metaprogramming and symbols
 
-A class is defined using the class keyword.
+---
 
+## 🧱 Define a Class
+
+```js
 class Person {
   constructor(name) {
     this.name = name;
   }
 }
-⚙️ Add Methods
 
-Methods are defined inside the class body.
-
+ ## ⚙️ Add Methods
 class Person {
   constructor(name) {
     this.name = name;
@@ -45,10 +52,8 @@ class Person {
     return `Hello, my name is ${this.name}`;
   }
 }
-🧩 Static Methods
 
-Static methods belong to the class, not instances.
-
+ ## 🧩 Static Methods
 class MathUtils {
   static add(a, b) {
     return a + b;
@@ -56,10 +61,8 @@ class MathUtils {
 }
 
 MathUtils.add(2, 3);
-🧬 Inheritance
 
-Use extends to inherit from another class.
-
+ ## 🧬 Inheritance
 class Animal {
   speak() {
     return 'Some sound';
@@ -71,31 +74,29 @@ class Dog extends Animal {
     return 'Bark';
   }
 }
-
-Using super:
-
 class Dog extends Animal {
   constructor(name) {
     super();
     this.name = name;
   }
 }
-🧠 Metaprogramming & Symbols
-🔹 Metaprogramming
-
-Writing code that manipulates other code.
-
+ 
+ ## 🧠 Metaprogramming & Symbols
+# Metaprogramming
 Object.keys({ a: 1, b: 2 });
-🔹 Symbols
+
+# Symbols
 const id = Symbol('id');
 
 const user = {
   [id]: 123
 };
-Unique and immutable
-Avoid property name conflicts
-🚀 Examples
-▶️ Run a simple example
+
+- Unique and immutable
+- Avoid name collisions
+- Not enumerable in for...in
+
+ ## 🚀 Examples
 class Person {
   constructor(name) {
     this.name = name;
@@ -108,19 +109,12 @@ class Person {
 
 const user = new Person('Alice');
 console.log(user.greet());
-▶️ Run with Node.js
+
+ ## Run with Node.js
 node index.js
-📦 Installation
+
+ ## 📦 Installation
 npm install
-🧪 Testing
+
+ ## 🧪 Testing
 npm test
-✅ Conclusion
-
-This project demonstrates:
-
-Object-oriented programming with ES6 classes
-Code reuse through inheritance
-Utility patterns using static methods
-Advanced JavaScript concepts like symbols
-
-💡 Tip: Always prefer const over let unless reassignment is required.
