@@ -42,6 +42,8 @@ class Person {
   }
 }
 
+---
+
  ## ⚙️ Add Methods
 class Person {
   constructor(name) {
@@ -53,6 +55,8 @@ class Person {
   }
 }
 
+---
+
  ## 🧩 Static Methods
 class MathUtils {
   static add(a, b) {
@@ -61,6 +65,8 @@ class MathUtils {
 }
 
 MathUtils.add(2, 3);
+
+---
 
  ## 🧬 Inheritance
 class Animal {
@@ -80,7 +86,9 @@ class Dog extends Animal {
     this.name = name;
   }
 }
- 
+
+---
+
  ## 🧠 Metaprogramming & Symbols
 # Metaprogramming
 Object.keys({ a: 1, b: 2 });
@@ -96,6 +104,8 @@ const user = {
 - Avoid name collisions
 - Not enumerable in for...in
 
+---
+
  ## 🚀 Examples
 class Person {
   constructor(name) {
@@ -109,6 +119,8 @@ class Person {
 
 const user = new Person('Alice');
 console.log(user.greet());
+
+---
 
  ## Run with Node.js
 node index.js
