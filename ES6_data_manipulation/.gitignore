@@ -1,0 +1,28 @@
+# Dépendances (Le plus important !)
+node_modules/
+dist/
+build/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environnement virtuel (Puisque tu es sous WSL avec un .venv)
+.venv/
+venv/
+ENV/
+
+# Variables d'environnement (Sécurité)
+.env
+.env.local
+
+# Tests et Couverture
+coverage/
+.jest/
+
+# IDE et OS
+.vscode/
+.idea/
+.DS_Store
+*.swp
