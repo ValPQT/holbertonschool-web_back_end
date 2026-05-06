@@ -1,0 +1,48 @@
+# --- DÉPENDANCES ---
+# Ne jamais commit ce dossier (trop lourd, réinstallable via npm install)
+node_modules/
+
+# --- ENVIRONNEMENT VIRTUEL (WSL / Python) ---
+# Ignore l'environnement virtuel que l'on voit dans ton terminal (.venv)
+.venv/
+venv/
+ENV/
+bin/
+lib/
+develop-eggs/
+dist/
+eggs/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# --- CONFIGURATION PERSONNELLE & IDE ---
+# Paramètres spécifiques à ton éditeur (VS Code, JetBrains)
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- LOGS ET TEMPORAIRES ---
+# Fichiers de log générés en cas d'erreur npm ou système
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+.eslintcache
+
+# --- TESTS ET BUILD ---
+# Dossiers de couverture de tests (Jest) et fichiers de build
+coverage/
+.jest/
+build/
+dist/
+
+# --- SÉCURITÉ ---
+# Fichiers contenant des clés secrètes ou mots de passe (si tu en crées)
+.env
+.env.local
