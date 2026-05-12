@@ -1,5 +1,10 @@
- const fs = require('fs');
+const fs = require('fs');
 
+/**
+ * Lit la base de données de manière asynchrone et compte les étudiants.
+ * @param {string} path Le chemin vers le fichier CSV.
+ * @returns {Promise}
+ */
 function countStudents(path) {
   return new Promise((resolve, reject) => {
     fs.readFile(path, 'utf8', (err, data) => {
@@ -8,21 +13,30 @@ function countStudents(path) {
         return;
       }
 
+      // Nettoyage des lignes (on retire les lignes vides)
       const lines = data.split('\n').filter((line) => line.trim() !== '');
-      const students = lines.slice(1);
+      const studentsLines = lines.slice(1);
 
-      console.log(`Number of students: ${students.length}`);
+      console.log(`Number of students: ${studentsLines.length}`);
 
       const fields = {};
-      for (const student of students) {
-        const [firstname, , , field] = student.split(',');
-        if (!fields[field]) fields[field] = [];
-        fields[field].push(firstname);
-      }
+      studentsLines.forEach((line) => {
+        const student = line.split(',');
+        // On récupère le prénom et le domaine (field)
+        const firstname = student[0];
+        const field = student[3];
 
-      for (const [field, names] of Object.entries(fields)) {
-        console.log(`Number of students in ${field}: ${names.length}. List: ${names.join(', ')}`);
-      }
+        if (!fields[field]) {
+          fields[field] = [];
+        }
+        fields[field].push(firstname);
+      });
+
+      // On utilise Object.keys pour être compatible avec les règles ESLint strictes
+      Object.keys(fields).forEach((field) => {
+        const list = fields[field].join(', ');
+        console.log(`Number of students in ${field}: ${fields[field].length}. List: ${list}`);
+      });
 
       resolve();
     });
